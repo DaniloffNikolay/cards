@@ -67,7 +67,7 @@ public abstract class BankCard {
 
     abstract protected double doPayOperations(double sum);
 
-    public void checkSum(double sum){
+    private void checkSum(double sum){
         if (sum < 0)
             throw new IncorrectData("Сумма отрицательная!");
     }

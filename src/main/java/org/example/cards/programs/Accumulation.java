@@ -24,4 +24,12 @@ public class Accumulation implements BonusProgram {
     public String getDescription() {
         return "Количество бонусов: " + allAccumulation + "\n";
     }
+
+    public boolean writeOffAccumulation(double sumAccumulation) {
+        if (sumAccumulation > allAccumulation)
+            return false;
+        else
+            allAccumulation -= sumAccumulation;
+        return true;
+    }
 }
